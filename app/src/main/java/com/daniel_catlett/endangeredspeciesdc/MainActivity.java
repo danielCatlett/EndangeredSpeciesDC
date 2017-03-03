@@ -24,11 +24,13 @@ public class MainActivity extends AppCompatActivity
         GridView grid = (GridView)findViewById(R.id.gridView);
         final ImageView pic = (ImageView)findViewById(R.id.imgLarge);
         grid.setAdapter(new ImageAdapter(this));
+        pic.setImageResource(R.drawable.eagle);
+
 
         grid.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
                 Toast.makeText(getBaseContext(), "Selected Species " + (position + 1), Toast.LENGTH_SHORT).show();
                 pic.setImageResource(Animals[position]);
@@ -40,10 +42,7 @@ public class MainActivity extends AppCompatActivity
     {
         private Context context;
 
-        public ImageAdapter(Context c)
-        {
-
-        }
+        public ImageAdapter(Context c) { context = c; }
 
         @Override
         public int getCount()
@@ -69,7 +68,7 @@ public class MainActivity extends AppCompatActivity
             pic = new ImageView(context);
             pic.setImageResource(Animals[position]);
             pic.setScaleType(ImageView.ScaleType.FIT_XY);
-            pic.setLayoutParams(new GridView.LayoutParams(330,330));
+            pic.setLayoutParams(new GridView.LayoutParams(330,300));
             return pic;
         }
     }
