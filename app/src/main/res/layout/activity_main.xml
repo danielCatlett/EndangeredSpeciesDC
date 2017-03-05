@@ -5,26 +5,24 @@
     android:orientation="vertical"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="match_parent"
     tools:context="com.daniel_catlett.endangeredspeciesdc.MainActivity">
 
-    <GridView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:numColumns="3"
-        android:columnWidth="160dp"
-        android:horizontalSpacing="5dp"
-        android:verticalSpacing="5dp"
-        android:id="@+id/gridView" />
+<GridView
+android:layout_width="match_parent"
+android:layout_height="200dp"
+    android:numColumns="3"
+    android:columnWidth="160dp"
+    android:horizontalSpacing="5dp"
+    android:verticalSpacing="5dp"
+    android:id="@+id/gridView" />
 
-    <ImageView
-        android:layout_width="270dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center_horizontal"
-        app:srcCompat="@drawable/eagle"
-        android:id="@+id/imgLarge"
-        android:contentDescription="@string/imgLarge"/>
+<ImageView
+android:layout_width="270dp"
+android:layout_height="300dp"
+android:layout_gravity="center_horizontal"
+android:id="@+id/imgLarge"
+android:contentDescription="@string/imgLarge"
+android:src="@drawable/elephant" />
 
-</LinearLayout>
-
-
+    </LinearLayout>
